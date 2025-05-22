@@ -15,7 +15,7 @@ import { submitLink } from "@/api/submitLink";
 
 export default function Home() {
   const [longUrl, setLongUrl] = useState("");
-  const [trimmedUrl, setTrimmedUrl] = useState("https://trimmr.io/short");
+  const [trimmedUrl, setTrimmedUrl] = useState("https://trimmr.dev/short");
 
   const handleInputChange = (event: {
     target: { value: React.SetStateAction<string> };
@@ -60,7 +60,7 @@ export default function Home() {
                   e.preventDefault();
                   try {
                     const response = await submitLink(longUrl);
-                    setTrimmedUrl("https://trimmr.io/" + response.id); // Assuming the response has a shortUrl property
+                    setTrimmedUrl("https://trimmr.dev/" + response.id); // Assuming the response has a shortUrl property
                   } catch (error) {
                     console.error("Error trimming URL:", error);
                     // You might want to handle errors by showing a message to the user
