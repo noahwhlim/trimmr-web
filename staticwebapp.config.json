@@ -1,8 +1,0 @@
-{
-  "routes": [
-    {
-      "route": "/{shortcode}",
-      "rewrite": "https://<your-backend-app>.azurewebsites.net/{shortcode}"
-    }
-  ]
-}
